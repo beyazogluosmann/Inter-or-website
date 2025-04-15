@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DES İÇ MİMARLIK - Projeler</title>
+
+    <!-- Minified and latest Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="projects.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Hide content initially -->
+   
+</head>
+<body>
+    <!-- Loader that is shown until all images are loaded -->
+    <div id="loading-overlay">
+        <div class="loading-logo">
+            <img src="images/logo.webp" alt="Loading Logo" class="logo">
+        </div>
+    </div>
+   
+
+    <div id="content">
+        <header class="navbar navbar-expand-md navbar-light fixed-top">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <picture>
+                        <source srcset="images/logo.webp" type="image/webp" media="(max-width: 576px)">
+                        <source srcset="images/logo.webp" type="image/webp" media="(max-width: 768px)">
+                        <source srcset="images/logo.webp" type="image/webp" media="(min-width: 769px)">
+                        <img src="images/logo.png" alt="DES Mimarlık Logo" class="img-fluid">
+                    </picture>
+                </div>
+                <nav class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="index.html" class="nav-link active" data-en="Home">ANASAYFA</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link" data-en="About">HAKKIMIZDA</a></li>
+                        <li class="nav-item"><a href="services.html" class="nav-link" data-en="Services">HİZMETLER</a></li>
+                        <li class="nav-item"><a href="projects.html" class="nav-link" data-en="Projects">PROJELER</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link" data-en="Contact">İLETİŞİM</a></li>
+                        <li class="nav-item"><a href="#" id="turkish"><img src="images/turkey.webp" class="flag-icon" alt="Türkçe"></a></li>
+                        <li class="nav-item"><a href="#" id="english"><img src="images/united-kingdom.webp" class="flag-icon" alt="English"></a></li>
+                    </ul>
+                </nav>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </header>
+
+        <section class="projects py-5">
+            <div class="container">
+                <h1 class="mb-4 text-center">Projelerimiz</h1>
+                <div class="row">
+                    <!-- Project items go here -->
+                    <!-- Example Project Item -->
+                    <div class="col-md-4 mb-4">
+                        
+                        <div class="card project-item">
+                            <a href="#" data-slider="1">
+                                <picture>
+                                   
+                                    <source srcset="damla_hn1/s3-min.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="damla_hn1/s3-min.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="damla_hn1/s3-min.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="damla_hn1/s3-min.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Folkart Nefes Villa Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="2">
+                                <picture>
+                                    <source srcset="kubist1/1-min.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="kubist1/1-min.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="kubist1/1-min.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="kubist1/1-min.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Kubist Park Porjesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="3">
+                                <picture>
+                                    <source srcset="demir_country1/m2-min.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="demir_country1/m2-min.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="demir_country1/m2-min.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="demir_country1/m2-min.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Demir Country Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="4">
+                                <picture>
+                                    <source srcset="bir_bahce1/5837189223797604958_121.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="bir_bahce1/5837189223797604958_121.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="bir_bahce1/5837189223797604958_121.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="bir_bahce1/5837189223797604958_121.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">BirBahçe Çekmeköy Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="5">
+                                <picture>
+                                    <source srcset="diktas_evi1/g4_4_11zon.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="diktas_evi1/g4_4_11zon.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="diktas_evi1/g4_4_11zon.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="diktas_evi1/g4_4_11zon.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Akzirve Strada Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="6">
+                                <picture>
+                                    <source srcset="silivri1/ebeveyn_banyo1_1_11zon.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="silivri1/ebeveyn_banyo1_1_11zon.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="silivri1/ebeveyn_banyo1_1_11zon.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="silivri1/ebeveyn_banyo1_1_11zon.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Silivri Konut Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="7">
+                                <picture>
+                                    <source srcset="loft1/s1_1_11zon.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="loft1/s1_1_11zon.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="loft1/s1_1_11zon.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="loft1/s1_1_11zon.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Loft Konut Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="8">
+                                <picture>
+                                    <source srcset="erden_bey1/1_1_11zon.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="erden_bey1/1_1_11zon.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="erden_bey1/1_1_11zon.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="erden_bey1/1_1_11zon.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Deniz İstanbul Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="9">
+                                <picture>
+                                    <source srcset="cocuk_odasi1/a1.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="cocuk_odasi1/a1.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="cocuk_odasi1/a1.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="cocuk_odasi1/a1.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Acıbadem Çocuk Odası Projesi </h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="10">
+                                <picture>
+                                    <source srcset="kadir_alkan1/3KR.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="kadir_alkan1/3KR.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="kadir_alkan1/3KR.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="kadir_alkan1/3KR.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Kadir Alkan Beylikdüzü Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="11">
+                                <picture>
+                                    <source srcset="lotus_dis1/1.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="lotus_dis1/1.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="lotus_dis1/1.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="lotus_dis1/1.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Lotus Diş Kliniği Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="12">
+                                <picture>
+                                    <source srcset="apel_is1/Apel-is1-min.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="apel_is1/Apel-is1-min.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="apel_is1/Apel-is1-min.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="apel_is1/Apel-is1-min.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Apel İş Fuar Standı</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="13">
+                                <picture>
+                                    <source srcset="duzce_cam1/1_1_11zon.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="duzce_cam1/1_1_11zon.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="duzce_cam1/1_1_11zon.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="duzce_cam1/1_1_11zon.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Düzce Cam Fuar Standı</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="14">
+                                <picture>
+                                    <source srcset="childish1/2-min.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="childish1/2-min.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="childish1/2-min.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="childish1/2-min.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Childish Langauge Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="15">
+                                <picture>
+                                    <source srcset="bikelife1/bike1_1_11zon.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="bikelife1/bike1_1_11zon.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="bikelife1/bike1_1_11zon.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="bikelife1/bike1_1_11zon.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Bikelife Sentez Avm Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="16">
+                                <picture>
+                                    <source srcset="casablu/c4.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="casablu/c4.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="casablu/c4.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="casablu/c4.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Casablu Konut Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="17">
+                                <picture>
+                                    <source srcset="deniz istanbul/d1.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="deniz istanbul/d1.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="deniz istanbul/d1.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="deniz istanbul/d1.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Deniz İstanbul Render</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="18">
+                                <picture>
+                                    <source srcset="dubleks silivri1/b1.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="dubleks silivri1/b1.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="dubleks silivri1/b1.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="dubleks silivri1/b1.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Dubleks Silivri</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Repeat other project items as needed -->
+                </div>
+            </div>
+        </section>
+
+        <div id="slider-overlay" class="slider-overlay">
+            <div class="slider-content">
+                <span class="close">&times;</span>
+                <span class="prev">&#10094;</span>
+                <div class="slider-images"></div>
+                <span class="next">&#10095;</span>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <picture>
+                        <source srcset="images/logo.webp" type="image/webp" media="(max-width: 576px)">
+                        <source srcset="images/logo.webp" type="image/webp" media="(max-width: 768px)">
+                        <source srcset="images/logo.webp" type="image/webp" media="(min-width: 769px)">
+                        <img src="images/logo.png" alt="DES Mimarlık Logo" loading="lazy">
+                    </picture>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <ul>
+
+                            <li><a href="index.html">Anasayfa</a></li>
+                            <li><a href="about.html">Hakkımızda</a></li>
+                            <li><a href="about.html">Hizmetler</a></li>
+                            <li><a href="projects.html">Projelerimiz</a></li>
+                            <li><a href="contact.html">İletişim</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Hizmetlerimiz</h3>
+                        <ul>
+                            <li><a href="#">Tasarım</a></li>
+                            <li><a href="#">Danışmanlık</a></li>
+                            <li><a href="#">Uygulama</a></li>
+                            <li><a href="#">Peyzaj</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-description">
+                    Des İç Mimarlık, ev ve villa tasarımlarından fuar stantlarına, mağazalardan klinik ve showroomlara
+                    kadar geniş bir yelpazede özelleştirilmiş ve anahtar teslim projeler sunar. <br><p>Estetik ve fonksiyonelliği
+                    bir araya getirerek, her mekanınızı sizin için en iyi şekilde tasarlarız.</p><br>
+                    <div class="social-media-footer">
+                        <a href="https://www.instagram.com/interiors.des/"><img src="images/facebook.webp"
+                            class="social-icon" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/interiors.des/"><img src="images/instagram.webp"
+                            class="social-icon" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/company/des-i%CC%87%C3%A7-mimarl%C4%B1k/"><img
+                            src="images/linkedin.webp" class="social-icon" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="whatsapp-icon">
+                <a id="whatsapp-link" href="#" target="_blank">
+                    <img src="images/whatsapp.webp" alt="WhatsApp">
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 DES Mimarlık. Tüm hakları saklıdır.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Minified and latest versions of JS libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Your custom JS -->
+    <script src="projects.js"></script>
+</body>
+</html>

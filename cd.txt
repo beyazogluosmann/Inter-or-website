@@ -1,0 +1,15 @@
+<div class="col-md-4 mb-4">
+                        <div class="card project-item">
+                            <a href="#" data-slider="1">
+                                <picture>
+                                    <source srcset="bir_bahce1/5837189223797604958_121.jpg" type="image/webp" media="(max-width: 576px)">
+                                    <source srcset="bir_bahce1/5837189223797604958_121.jpg" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="bir_bahce1/5837189223797604958_121.jpg" type="image/webp" media="(min-width: 769px)">
+                                    <img src="bir_bahce1/5837189223797604958_121.jpg" class="card-img-top" alt="Proje Resmi" loading="lazy">
+                                </picture>
+                                <div class="card-body">
+                                    <h5 class="card-title">Folkart Nefes Villa Projesi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>

@@ -1,0 +1,551 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    background: url('damla_hn1/s4-min.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Karartma efekti */
+    background-blend-mode: darken; /* Resmi karartmak için kullanılır */
+    color: #fff;
+    transition: background-color 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Gölgelendirme */
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+header.scrolled {
+    background-color: #000; /* Karanlık gri arka plan */
+    height: 100px; /* Yüksekliği azalt */
+    background-image: none;
+}
+
+header.scrolled .nav-link {
+    color: #f7f7f7 !important /* Beyaz renkli metin */
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white !important; /* Change text color to white */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Optionally, change the hover color to something visible like yellow */
+    transform: translateY(-5px);
+}
+
+
+
+/* Hmaburger ikonu */
+.navbar-toggler-icon {
+    background-image: none; /* Bootstrap varsayılan ikonunu kaldır */
+    position: relative;
+    width: 30px; /* Genişlik */
+    height: 2px; /* İkon çubuğunun kalınlığı */
+    background-color: #fff; /* İkon rengi */
+    display: inline-block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    top: -10px; /* Üst çubuk pozisyonu */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f7f7f7; /* İkon rengi */
+}
+
+.navbar-toggler-icon::after {
+    top: 10px; /* Alt çubuk pozisyonu */
+    color: #000;
+}
+
+.flag-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+.section-content {
+    padding: 150px 20px; /* Yukarıdan boşluk azaltıldı */
+    background-color: #fff;
+    text-align: left;
+    color: #333;
+    max-width: 1000px; /* Maksimum genişlik ayarlandı */
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hafif gölge eklendi */
+    border-radius: 8px; /* Kenarlar yuvarlatıldı */
+}
+
+.section-content h1 {
+    font-size: 36px; /* Başlık boyutu artırıldı */
+    margin-bottom: 30px; /* Alt boşluk artırıldı */
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid #ffcc00; /* Alt çizgi eklendi */
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.section-content p {
+    font-size: 18px; /* Yazı boyutu küçültüldü */
+    line-height: 1.8;
+    margin-bottom: 30px; /* Alt boşluk artırıldı */
+    text-align: justify;
+    position: relative;
+    padding-left: 50px;
+    margin-left: 10px;
+    border-left: 4px solid #ffcc00; /* Kenar çizgisi kalınlaştırıldı */
+    background: #f9f9f9; /* Arka plan rengi eklendi */
+    padding: 20px; /* İçerik boşluğu artırıldı */
+    border-radius: 5px; /* Kenarlar yuvarlatıldı */
+}
+
+.section-content p:before {
+    content: '➔';
+    position: absolute;
+    left: -35px; /* Sola daha fazla kaydırıldı */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #ffcc00;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+.section-content img {
+    width: 750px;
+    height: 400px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Görsel gölgesi eklendi */
+}
+
+.section-content .content-block {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.section-content .content-block img {
+    flex: 1;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Görsel gölgesi eklendi */
+}
+
+.section-content .content-block .text {
+    flex: 2;
+}
+
+.section-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-content ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.section-content ul li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    color: #ffcc00;
+    line-height: 1;
+    margin-right: 10px;
+}
+
+.section-content blockquote {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-left: 4px solid #ffcc00;
+    border-radius: 5px;
+}
+
+.section-content blockquote:before {
+    content: '“';
+    font-size: 36px;
+    color: #ffcc00;
+    margin-right: 10px;
+}
+
+.section-content blockquote:after {
+    content: '”';
+    font-size: 36px;
+    color: #ffcc00;
+    margin-left: 10px;
+}
+.social-media {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a,
+.social-media-footer a {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+.social-media a:hover .social-icon,
+.social-media-footer a:hover .social-icon {
+    transform: scale(1.2);
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-description {
+    flex: 2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-description p {
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    filter: none;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon:hover img {
+    transform: scale(1.2);
+}
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin: 6px 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 10px 0; /* Mobil cihazlarda biraz daha uzun */
+    }
+    header.scrolled{
+        height: 120px;
+    }
+    header.scrolled .nav-link {
+        color: black !important /* Beyaz renkli metin */
+    }
+    .navbar-toggler {
+        display: block !important;
+        margin-right: 10px;
+    }
+
+    .collapse {
+        display: none;
+    }
+    .collapse.show {
+        display: block;
+    }
+    .navbar-nav {
+        background-color: #f7f7f7; /* Arka plan rengi */
+        color: #000 !important;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar-nav .nav-link {
+        color: #000 !important; /* Hamburger menüde siyah */
+        font-size: 20px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #333 !important; /* Hover'da biraz daha koyu bir siyah */
+    }
+    .nav-link {
+        display: block; /* Linklerin blok olarak görünmesini sağlar */
+        width: 100%; /* Tam genişlik */
+        text-align: center; /* Metni ortalar */
+        padding: 12px 0; /* Üst ve alt padding */
+        color: black; /* Yazı rengi */
+        font-size: 18px; /* Yazı boyutu */
+        font-weight: bold; /* Yazı kalınlığı */ 
+    }
+    .nav-link:after {
+        content: '';
+        display:contents;
+        width: 100%;
+        height: 4px;
+        border-bottom: 1px solid #ccc;
+        width: 80px;
+        text-align: center;
+        
+    }
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+        
+    }
+    .navbar-nav .nav-link {
+        color: #000; /* Menü yazıları siyah olacak */
+        font-size: 20px;
+    }
+    .navbar-collapse{
+        text-align: center;    
+    }
+    
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-column {
+        margin-bottom: 20px;
+    }
+    .section-content {
+        padding: 20px; /* Genel boşluğu azalt */
+        max-width: 100%; /* Genişlik sınırlamasını kaldır */
+        box-shadow: none; /* Gölgeyi kaldır */
+        border-radius: 0; /* Kenar yuvarlamalarını kaldır */
+    }
+
+    .section-content h1 {
+        font-size: 24px; /* Başlık boyutunu küçült */
+        margin-bottom: 20px; /* Alt boşluğu azalt */
+        padding-top: 200px;
+    }
+
+    .section-content p {
+        font-size: 16px; /* Yazı boyutunu küçült */
+        padding-left: 15px; /* Sol boşluğu azalt */
+        margin-left: 0; /* Sol dış boşluğu kaldır */
+        border-left: none; /* Sol kenar çizgisini kaldır */
+        background: none; /* Arka plan rengini kaldır */
+        padding: 10px; /* İçerik boşluğunu azalt */
+        border-radius: 0; /* Kenar yuvarlamalarını kaldır */
+    }
+
+    .section-content img {
+        width: 100%; /* Resimleri tam genişlik yap */
+        height: auto; /* Yüksekliği otomatik ayarla */
+        margin-bottom: 15px; /* Alt boşluğu azalt */
+        border-radius: 5px; /* Hafif kenar yuvarlaması */
+        box-shadow: none; /* Görsel gölgesini kaldır */
+    }
+
+    .section-content .content-block {
+        flex-direction: column; /* İçerikleri dikey hizala */
+        align-items: center; /* İçerikleri ortala */
+    }
+
+    .section-content .content-block img {
+        margin-right: 0; /* Sağ boşluğu kaldır */
+        margin-bottom: 15px; /* Alt boşluk ekle */
+    }
+
+    .section-content .content-block .text {
+        flex: none;
+        width: 100%; /* Metin genişliğini tam yap */
+        text-align: center; /* Metni ortala */
+    }
+
+    .section-content ul {
+        padding-left: 20px; /* Sol boşluğu azalt */
+    }
+
+    .section-content ul li {
+        margin-bottom: 15px; /* Alt boşluğu azalt */
+        padding-left: 20px; /* Sol boşluğu azalt */
+    }
+
+    .section-content blockquote {
+        font-size: 16px; /* Yazı boyutunu küçült */
+        padding: 10px; /* İçerik boşluğunu azalt */
+        margin: 15px 0; /* Dış boşlukları azalt */
+    }
+
+    .social-media {
+        position: static;
+        bottom: auto;
+        margin-top: 20px; /* Üst boşluk ekle */
+    }
+
+    .whatsapp-icon {
+        bottom: 20px; /* Sabit konumlandırmayı güncelle */
+        right: 20px; /* Sabit konumlandırmayı güncelle */
+    }
+}

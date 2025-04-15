@@ -1,0 +1,428 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    background: url('damla_hn1/s4-min.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Karartma efekti */
+    background-blend-mode: darken; /* Resmi karartmak için kullanılır */
+    color: #fff;
+    transition: background-color 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Gölgelendirme */
+}
+
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+header.scrolled {
+    background-color: #000; /* Karanlık gri arka plan */
+    height: 100px; /* Yüksekliği azaltma */
+    background-image: none;
+}
+
+header.scrolled .nav-link {
+    color: #f7f7f7 !important /* Beyaz renkli metin */
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white !important; /* Change text color to white */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    
+    transform: translateY(-5px);
+}
+
+
+.navbar-toggler-icon {
+    background-image: none; 
+    position: relative;
+    width: 30px; /* Genişlik */
+    height: 2px; /* İkon çubuğunun kalınlığı */
+    background-color: #fff; /* İkon rengi */
+    display: inline-block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    top: -10px; /* Üst çubuk pozisyonu */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f7f7f7; /* İkon rengi */
+}
+
+.navbar-toggler-icon::after {
+    top: 10px; /* Alt çubuk pozisyonu */
+    color: #000;
+}
+
+.flag-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.services {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+    color: #000;
+    margin-top: 200px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between; /* Kartlar arasındaki boşlukları dengeler */
+    flex-wrap: wrap; /* Kartların ekran genişliğine göre aşağıya kaymasını sağlar */
+    gap: 20px; /* Kartlar arasında boşluk bırakır */
+}
+
+.service-item {
+    width: calc(48% - 20px); /* Kartların genişliğini artırıyoruz, ekranın %48'ini kaplayacak şekilde ayarlanmıştır */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item img {
+    width: 100%;
+    height: 300px; /* Resimlerin yüksekliğini ayarlar */
+    object-fit: cover; /* Resmin kartın içine düzgün oturmasını sağlar */
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.service-item h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.details-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #000; 
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.details-link:hover {
+    background-color: #ffcc00; 
+    color: black;
+    text-decoration: none; 
+}
+
+
+.social-media {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a,
+.social-media-footer a {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+.social-media a:hover .social-icon,
+.social-media-footer a:hover .social-icon {
+    transform: scale(1.2);
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-description {
+    flex: 2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-description p {
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    filter: none;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon:hover img {
+    transform: scale(1.2);
+}
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin: 6px 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 10px 0; /* Mobil cihazlarda biraz daha uzun */
+    }
+    header.scrolled{
+        height: 120px;
+    }
+    header.scrolled .nav-link {
+        color: black !important /* Beyaz renkli metin */
+    }
+    .navbar-toggler {
+        display: block !important;
+        margin-right: 10px;
+    }
+
+    .collapse {
+        display: none;
+    }
+    .collapse.show {
+        display: block;
+    }
+    .navbar-nav {
+        background-color: #f7f7f7; /* Arka plan rengi */
+        color: #000 !important;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar-nav .nav-link {
+        color: #000 !important; /* Hamburger menüde siyah */
+        font-size: 20px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #333 !important; /* Hover'da biraz daha koyu bir siyah */
+    }
+    .nav-link {
+        display: block; /* Linklerin blok olarak görünmesini sağlar */
+        width: 100%; /* Tam genişlik */
+        text-align: center; /* Metni ortalar */
+        padding: 12px 0; /* Üst ve alt padding */
+        color: black; /* Yazı rengi */
+        font-size: 18px; /* Yazı boyutu */
+        font-weight: bold; /* Yazı kalınlığı */ 
+    }
+    .nav-link:after {
+        content: '';
+        display:contents;
+        width: 100%;
+        height: 4px;
+        border-bottom: 1px solid #ccc;
+        width: 80px;
+        text-align: center;
+        
+    }
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+        
+    }
+    .navbar-nav .nav-link {
+        color: #000; /* Menü yazıları siyah olacak */
+        font-size: 20px;
+    }
+    .navbar-collapse{
+        text-align: center;    
+    }
+    
+    .services {
+        margin-top: 140px; /* Header yüksekliği kadar boşluk ekleyin */
+    }
+    .services-container {
+        flex-direction: column;
+    }
+    .service-item {
+        width: 100%;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-column {
+        margin-bottom: 20px;
+    }
+}

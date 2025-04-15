@@ -1,0 +1,654 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    background: url('damla_hn1/s4-min.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Karartma efekti */
+    background-blend-mode: darken; /* Resmi karartmak için kullanılır */
+    color: #fff;
+    transition: background-color 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Gölgelendirme */
+}
+
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+header.scrolled {
+    background-color: #000; /* Karanlık gri arka plan */
+    height: 100px; /* Yüksekliği azalt */
+    background-image: none;
+}
+
+header.scrolled .nav-link {
+    color: #f7f7f7 !important /* Beyaz renkli metin */
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white !important; /* Change text color to white */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Optionally, change the hover color to something visible like yellow */
+    transform: translateY(-5px);
+}
+
+
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f7f7f7;
+}
+
+.navbar-toggler-icon::after {
+    top: 10px;
+    color: #000;
+}
+
+.flag-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.section-content {
+    padding: 150px 20px;
+    background-color: #fff;
+    text-align: left;
+    color: #333;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 120px;
+}
+
+.section-content h1 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #ffcc00;
+    padding-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.section-content h1:hover {
+    color: #ffcc00;
+}
+
+.section-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+    position: relative;
+    padding-left: 50px;
+    margin-left: 10px;
+    border-left: 4px solid #ffcc00;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.section-content p:before {
+    content: '➔';
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #ffcc00;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+.section-content img {
+    width: 750px;
+    height: 400px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-content .content-block {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.section-content .content-block img {
+    flex: 1;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-content .content-block .text {
+    flex: 2;
+}
+
+.section-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-content ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.section-content ul li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    color: #ffcc00;
+    line-height: 1;
+    margin-right: 10px;
+}
+
+.section-content blockquote {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-left: 4px solid #ffcc00;
+    border-radius: 5px;
+}
+
+.section-content blockquote:before {
+    content: '“';
+    font-size: 36px;
+    color: #ffcc00;
+    margin-right: 10px;
+}
+
+.section-content blockquote:after {
+    content: '”';
+    font-size: 36px;
+    color: #ffcc00;
+    margin-left: 10px;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media-footer {
+    display: flex;
+    justify-content: center; /* İkonları yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    gap: 2px; /* İkonlar arasına boşluk bırak */
+}
+
+.social-media-footer a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-media-footer a img {
+    width: 30px; /* İkon genişliği */
+    height: 30px; /* İkon yüksekliği */
+    filter: invert(1); /* İkonları beyaz yapmak için (isteğe bağlı) */
+    transition: transform 0.3s ease;
+}
+
+.social-media-footer a:hover img {
+    transform: scale(1.2); /* Hover yapıldığında büyütme efekti */
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+.social-media a:hover .social-icon,
+.social-media-footer a:hover .social-icon {
+    transform: scale(1.2);
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-description {
+    flex: 2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-description p {
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    filter: none;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    transition: transform 0.3s ease;
+    margin-right: 60px ;
+}
+
+.whatsapp-icon:hover img {
+    transform: scale(1.2);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin: 6px 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 180px;
+    }
+    header.scrolled{
+        height: 120px;
+    }
+
+    header.scrolled .nav-link {
+        color: black !important;
+       
+    }
+
+    .navbar-toggler {
+        display: block !important;
+        margin-right: 10px;
+    }
+
+    .collapse {
+        display: none;
+        
+    }
+
+    .collapse.show {
+        display: block;
+    }
+
+    .navbar-nav {
+        background-color: #f7f7f7; /* Arka plan rengi */
+        color: #000 !important;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar-nav .nav-link {
+        color: #000 !important; /* Hamburger menüde siyah */
+        font-size: 20px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #333 !important; /* Hover'da biraz daha koyu bir siyah */
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .nav-link:after {
+        content: '';
+        display: contents;
+        width: 100%;
+        height: 4px;
+        border-bottom: 1px solid #ccc;
+        width: 80px;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+
+    .navbar-nav .nav-link {
+        color: #000;
+        font-size: 20px;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .section-content {
+        padding: 20px;
+        max-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        margin-top: 100px;
+    }
+
+    .section-content h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .section-content p {
+        font-size: 16px;
+        padding-left: 15px;
+        margin-left: 0;
+        border-left: none;
+        background: none;
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .section-content img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        box-shadow: none;
+    }
+
+    .section-content .content-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-content .content-block img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .section-content .content-block .text {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-content ul {
+        padding-left: 20px;
+    }
+
+    .section-content ul li {
+        margin-bottom: 15px;
+        padding-left: 20px;
+    }
+
+    .section-content blockquote {
+        font-size: 16px;
+        padding: 10px;
+        margin: 15px 0;
+    }
+
+    .social-media {
+        position: static;
+        bottom: auto;
+        margin-top: 20px;
+    }
+
+    .whatsapp-icon {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Ekibimiz Bölümü için Ekstra Stiller */
+.our-team {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.our-team h2 {
+    font-size: 42px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.our-team h2:hover {
+    color: #ffcc00;
+}
+
+.our-team .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.our-team .card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.our-team .card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+.our-team .card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.our-team .card-text {
+    font-size: 16px;
+    color: #666;
+}
+.whatsapp-icon{
+  right: -10px;   
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}

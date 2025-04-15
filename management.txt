@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DES İÇ MİMARLIK - Hizmetler</title>
+    <link rel="stylesheet" href="management.css">
+    <link rel="icon" type="image/png" href="images/logo.webp">
+</head>
+
+<body>
+    <header class="navbar navbar-expand-md navbar-light fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="images/logo.webp" alt="DES Mimarlık Logo" class="img-fluid">
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">ANASAYFA</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">HAKKIMIZDA</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">HİZMETLER</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">PROJELER</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">İLETİŞİM</a></li>
+                    <li class="nav-item"><a href="#" id="turkish"><img src="images/turkey.webp" class="flag-icon" alt="Türkçe"></a></li>
+                    <li class="nav-item"><a href="#" id="english"><img src="images/united-kingdom.webp" class="flag-icon" alt="English"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+
+    <div class="section-content">
+        <h1><b>UYGULAMA VE PROJE YÖNETİMİ</b></h1>
+        <img src="damla_hn1/s4-min.jpg" alt="Tasarım">
+        <p>Des İç Mimarlık olarak, projelerimizin hayata geçirilmesi sürecinde müşterilerimize kapsamlı bir
+            hizmet sunuyoruz. "Anahtar teslim" hizmet anlayışımızla, projelerimizin tüm aşamalarını titizlikle
+            yönetiyor ve müşterilerimize sorunsuz bir süreç yaşatıyoruz. Tasarımdan uygulamaya kadar her adımı
+            dikkatle planlayarak, zamanında ve bütçeye uygun şekilde projelerin tamamlanmasını sağlıyoruz.</p>
+
+        <p>Uygulama ve proje yönetimi hizmetlerimiz şu adımları içerir:</p>
+
+
+        <blockquote>
+            <b> Proje Planlama ve Koordinasyon: </b>Projenin başlangıcında detaylı bir planlama yaparak, her aşamanın
+            zamanlamasını ve gereksinimlerini belirleriz. İş programı oluştururken, iş akışını ve malzeme teminini
+            optimize ederiz. Bu süreçte, tüm ekipler arasındaki koordinasyonu sağlamak ve projenin sorunsuz
+            ilerlemesini temin etmek için kapsamlı bir koordinasyon yaparız.
+        </blockquote>
+        <blockquote>
+            <b> Malzeme ve Ekipman Temini: </b>Proje için gerekli tüm malzemelerin ve ekipmanların teminini üstleniriz.
+            Kaliteli malzemeler kullanarak, mekânın estetik ve işlevsel açıdan en yüksek standartlarda olmasını
+            sağlarız. Malzeme seçiminde, müşteri onayını alarak en uygun seçenekleri belirleriz.
+        </blockquote>
+        <blockquote>
+            <b> İnşaat ve Uygulama Süreci: </b> Uygulama aşamasında, projenin her detayı üzerinde titizlikle çalışırız.
+            Deneyimli ekibimizle birlikte, duvar işlemlerinden döşeme kaplamalarına, elektrik ve su tesisatından
+            mobilya montajına kadar tüm inşaat ve dekorasyon işlemlerini profesyonel bir şekilde gerçekleştiririz.
+            Her aşamada kalite kontrol yaparak, projenin en yüksek standartlarda tamamlanmasını sağlarız.
+        </blockquote>
+        <blockquote>
+            <b> Proje Yönetimi ve Denetim: </b> Projenin ilerleyişini sürekli olarak denetler ve gerekli durumlarda hızlı
+            müdahalelerde bulunuruz. Proje yönetimi sürecinde, işlerin program dahilinde ve bütçe sınırları
+            içinde kalmasını temin etmek için düzenli raporlamalar ve değerlendirmeler yaparız
+        </blockquote>
+        <blockquote>
+            <b> Son Kontroller ve Teslim: </b> Projenin tamamlanmasının ardından, son kontrolleri yaparak, müşterimize
+            eksiksiz ve sorunsuz bir mekân teslim ederiz. Anahtar teslim projelerimizle, müşterilerimize sadece
+            tasarım ve uygulama değil, aynı zamanda rahat ve stressiz bir deneyim sunmayı hedefliyoruz.
+        </blockquote>
+
+        <blockquote>
+            Des İç Mimarlık olarak, her projede müşterilerimizin memnuniyetini ve ihtiyaçlarını en ön planda
+            tutarak, iç mekân tasarımı ve uygulama süreçlerinde lider bir firma olma yolunda ilerliyoruz. "Anahtar
+            teslim" hizmetlerimizle, projelerinizi hayalinizdeki mekânlara dönüştürmek için buradayız.
+        </blockquote>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.webp" alt="DES Mimarlık Logo">
+                <p>Des Interiors Design</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <ul>
+
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="about.html">Hizmetler</a></li>
+                        <li><a href="projects.html">Projelerimiz</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hizmetlerimiz</h3>
+                    <ul>
+                        <li><a href="#">Tasarım</a></li>
+                        <li><a href="#">Danışmanlık</a></li>
+                        <li><a href="#">Uygulama</a></li>
+                        <li><a href="#">Peyzaj</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-description">
+                Des İç Mimarlık, ev ve villa tasarımlarından fuar stantlarına, mağazalardan klinik ve showroomlara
+                kadar pgeniş bir yelpazede özelleştirilmiş ve anahtar teslim projeler sunar. <br>
+                <p>Estetik ve fonksiyonelliği
+                    bir araya getirerek, her mekanınızı sizin için en iyi şekilde tasarlarız.</p><br>
+                <div class="social-icons">
+                    <a href="#"><img src="images/facebook.webp" alt="Facebook" class="social-icon"></a>
+                    <a href="#"><img src="images/linkedin.webp" alt="LinkedIn" class="social-icon"></a>
+                    <a href="#"><img src="images/instagram.webp" alt="Instagram" class="social-icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="whatsapp-icon">
+            <a id="whatsapp-link" href="#" target="_blank">
+                <img src="images/whatsapp.webp" alt="WhatsApp">
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 DES Mimarlık. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to handle scroll event
+        window.onscroll = function() {
+            var header = document.querySelector('header');
+            if (window.scrollY > 50) { // If user scrolls more than 50px
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        };
+    </script>
+
+<script>
+    // Function to detect if the user is on mobile
+    function isMobile() {
+        return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Set WhatsApp link based on the device
+    document.addEventListener('DOMContentLoaded', function() {
+        var whatsappLink = document.getElementById('whatsapp-link');
+        var phoneNumber = '905318443474'; // Replace this with your WhatsApp phone number
+
+        if (isMobile()) {
+            whatsappLink.href = 'https://api.whatsapp.com/send?phone=' + phoneNumber;
+        } else {
+            whatsappLink.href = 'https://web.whatsapp.com/send?phone=' + phoneNumber;
+        }
+    });
+</script>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="projects.js"></script>
+</body>
+
+</html>

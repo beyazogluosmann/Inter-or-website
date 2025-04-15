@@ -1,0 +1,739 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;  
+    display: flex;
+    flex-direction: column;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    flex: 1 0 auto; /* Bu, body'nin tüm kullanılabilir alanı kaplamasını sağlar */
+    padding-top: 150px; /* Header yüksekliği kadar üst boşluk */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    background: url('damla_hn1/s4-min.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Karartma efekti */
+    background-blend-mode: darken; /* Resmi karartmak için kullanılır */
+    color: #fff;
+    transition: background-color 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Gölgelendirme */
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+header.scrolled {
+    background-color: #000;
+    height: 100px;
+    background-image: none;
+}
+
+header.scrolled .nav-link {
+    color: #f7f7f7 !important;
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+header .logo img {
+    width: 120px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white !important; /* Change text color to white */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.container .logo img{
+    font-size: 250px;
+}
+
+.flag-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.projects {
+    padding: 50px 20px 100px; /* İçerik kısmına üstten padding ekle */
+    background-color: #f7f7f7;
+    text-align: center;
+    color: #000;
+}
+
+.projects .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    position: relative;
+    flex-basis: calc(33.333% - 10px); /* Her öğe için genişlik belirle, aralarda 10px boşluk olacak şekilde */
+    margin: 5px; /* Her bir öğenin etrafında küçük bir boşluk bırak */
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 250px; /* Resimler için sabit yükseklik belirle */
+    display: flex; /* Flexbox kullanarak içeriği yönet */
+    align-items: center; /* Resimleri dikey olarak ortala */
+    justify-content: center; /* Resimleri yatay olarak ortala */
+    transition: transform 0.5s ease; /* Transformasyon süresini uzat */
+}
+
+.project-item img {
+    width: auto; /* Orantılı genişlik */
+    max-width: 100%; /* Kutuya sığdır */
+    height: 100%; /* Yüksekliği sabitle */
+    object-fit: cover; /* Resmi kutuya sığacak şekilde ayarla */
+    transition: transform 0.2s ease; /* Animasyonu yavaşlat */
+}
+
+.project-item:hover img {
+    transform: scale(1.1); /* Hover durumunda büyüt */
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.1s ease;
+}
+
+.project-item:hover .card-body {
+    transform: translateY(0);
+}
+
+.card-body h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.project-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px; /* Add some spacing between the image and the title */
+}
+
+
+.projects h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #ffcc00;
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+
+}
+
+.slider-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+.slider-content {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    background: #444;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.slider-content img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slider-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #f7f7f7;
+}
+
+.slider-content .prev,
+.slider-content .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    background-color:#444;
+    color: #f7f7f7;
+}
+
+.slider-content .prev {
+    left: 10px;
+}
+
+.slider-content .next {
+    right: 10px;
+}
+
+footer {
+    margin-top: auto; /* Footer'ı sayfanın altına iter */
+    background-color: #111;
+    color: #fff;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-description {
+    flex: 2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-description p {
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    filter: none;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon:hover img {
+    transform: scale(1.2);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.social-media {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media-footer {
+    display: flex;
+    justify-content: center; /* İkonları yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    gap: 2px; /* İkonlar arasına boşluk bırak */
+}
+
+.social-media-footer a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-media-footer a img {
+    width: 30px; /* İkon genişliği */
+    height: 30px; /* İkon yüksekliği */
+    filter: invert(1); /* İkonları beyaz yapmak için (isteğe bağlı) */
+    transition: transform 0.3s ease;
+}
+
+.social-media-footer a:hover img {
+    transform: scale(1.2); /* Hover yapıldığında büyütme efekti */
+}
+
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+.social-media a:hover .social-icon,
+.social-media-footer a:hover .social-icon {
+    transform: scale(1.2);
+}
+
+/* hamburger ikonu*/
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f7f7f7;
+}
+
+.navbar-toggler-icon::after {
+    top: 10px;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 150px;
+    }
+    header.scrolled{
+        height: 120px;
+    }
+    header.scrolled .nav-link {
+        color: black !important /* Beyaz renkli metin */
+    }
+
+    .navbar-toggler {
+        display: block !important;
+    }
+    .navbar-nav {
+        background-color: #f7f7f7; /* Arka plan rengi */
+        color: #000 !important;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar-nav .nav-link {
+        color: #000 !important; /* Hamburger menüde siyah */
+        font-size: 20px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #333 !important; /* Hover'da biraz daha koyu bir siyah */
+    }
+    .nav-link {
+        display: block; /* Linklerin blok olarak görünmesini sağlar */
+        width: 100%; /* Tam genişlik */
+        text-align: center; /* Metni ortalar */
+        padding: 12px 0; /* Üst ve alt padding */
+        color: black; /* Yazı rengi */
+        font-size: 18px; /* Yazı boyutu */
+        font-weight: bold; /* Yazı kalınlığı */ 
+    }
+    .nav-link:after {
+        content: '';
+        display:contents;
+        width: 100%;
+        height: 4px;
+        border-bottom: 1px solid #ccc;
+        width: 80px;
+        text-align: center;
+        
+    }
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+        
+    }
+    .navbar-nav .nav-link {
+        color: #000; /* Menü yazıları siyah olacak */
+        font-size: 20px;
+    }
+    .navbar-collapse{
+        text-align: center;    
+    }
+    .slider-content{
+        width: 140%;
+    }
+    .slider-content img{
+        width: 100%;
+    }
+    .slider-content {
+        position: relative;
+        margin: 0 auto;
+        background:#444;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .collapse {
+        display: none;
+    }
+
+    .collapse.show {
+        display: block;
+    }
+
+    .projects .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column; /* Dikey olarak sıralama */
+        align-items: center; /* Yatay merkeze al */
+        justify-content: center; /* Dikey merkeze al */
+        text-align: center; /* Tüm metinleri ortala */
+    }
+    .footer-logo,
+    .footer-links,
+    .footer-description {
+        width: 100%; /* Tüm iç elemanların genişliğini tam sığdır */
+    }
+    .footer-links .footer-column {
+        margin-bottom: 20px; /* Her link grubu arasında boşluk */
+    }
+    .footer-links .footer-column:last-child {
+        margin-bottom: 0; /* Son link grubunda alt boşluğu kaldır */
+    }
+    .footer-description {
+        margin-top: 20px; /* Açıklama metni için üstte boşluk */
+    }
+    .social-media-footer {
+        display: flex;
+        justify-content: center; /* Sosyal medya ikonlarını merkeze al */
+        margin-top: 20px; /* Sosyal medya ikonları için üstte boşluk */
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column; /* Linkleri dikey olarak düzenle */
+        align-items: center; /* Linkleri merkeze al */
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+    .projects h1 {
+        font-size: 32px; /* Tablet boyutları için yazı boyutu */
+    }
+}
+@media (max-width: 992px) {
+    .projects h1 {
+        font-size: 36px; /* Orta boyutlu ekranlar için yazı boyutu */
+    }
+}
+@media (max-width: 576px) {
+    .projects h1 {
+        font-size: 28px; /* Mobil cihazlar için yazı boyutu */
+    }
+}
+/* Ensure images retain aspect ratio and prevent zooming */
+@media (max-width: 768px) {
+    .project-item {
+        height: auto; /* Remove fixed height to allow images to resize properly */
+        display: block; /* Ensure the project item does not force the image into a fixed aspect ratio */
+    }
+
+    .project-item img {
+        width: 100%; /* Make the image take up the full width of its container */
+        height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+        object-fit: cover; /* Ensure the image covers the container without distortion */
+        object-position: center; /* Center the image within the container */
+    }
+}
+@media (max-width: 768px) {
+    .card-body {
+        position: static; /* Remove the absolute positioning */
+        background: none; /* Remove the background color on mobile */
+        color: #000; /* Make the text color black for better visibility */
+        padding: 10px 0; /* Add padding to space the text from the image */
+        text-align: center;
+        transform: none; /* Remove any transform effect */
+    }
+
+    .project-item:hover .card-body {
+        transform: none; /* Disable hover effect on small screens */
+    }
+
+    .card-body h5 {
+        margin: 10px 0 0 0; /* Adjust margin to add space between the title and the image */
+        font-size: 16px; /* Slightly smaller font size for mobile */
+        font-weight: normal; /* Normal weight to match mobile style */
+    }
+
+    .project-item img {
+        width: 100%; /* Ensure the image takes full width */
+        height: auto; /* Keep the aspect ratio intact */
+    }
+}
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff; /* Arka plan beyaz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loading-logo {
+    width: 150px; /* Varsayılan logo genişliği */
+    height: auto;
+    animation: spin 2s linear infinite; /* Sonsuz dönen animasyon */
+    max-width: 100%; /* Küçük ekranlarda logonun taşmasını önlemek için */
+    border-radius: 1000px;
+}
+
+/* Dönen animasyon */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Sayfa yüklendikten sonra gizleme */
+#loading-overlay.hidden {
+    display: none;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    #loading-logo {
+        width: 120px; /* Tabletler için logo genişliği */
+    }
+}
+
+@media (max-width: 480px) {
+    #loading-logo {
+        width: 100px; /* Mobil cihazlar için logo genişliği */
+    }
+}
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Şeffaf siyah arka plan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Diğer içeriklerin üzerinde olacak */
+    color: white;
+    transition: opacity 0.5s ease; /* Yumuşak geçiş */
+}
+
+/* Logonun merkezde durması */
+.loading-logo {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+/* Logonun görünümü ve animasyon başlangıcı */
+.loading-logo .logo {
+    width: 100%;
+    height: auto;
+    animation: logo-pulse 1.5s infinite ease-in-out; /* Büyüyüp küçülme efekti */
+}
+
+/* Logo etrafında siyah gölgeler */
+.loading-logo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background-color: rgba(0, 0, 0, 0.5); /* Siyah gölge */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: shadow-expand 1.5s infinite ease-in-out; /* Gölgelerin genişlemesi */
+    z-index: -1;
+}
+
+/* Logonun büyüyüp küçülme animasyonu */
+@keyframes logo-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Gölge genişleme animasyonu */
+@keyframes shadow-expand {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Loading ekranı gizleme */
+#loading-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+
+

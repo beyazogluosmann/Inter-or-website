@@ -1,0 +1,115 @@
+Müşterinin rahat ulaşması lazım bilgilere
+-------------------------------------------
+navbar kısmı:
+
+-Anasayfa kısmı olucak
+-hakkımızda
+-Hizmetler
+-Proje kısmı oluşuturulacak
+-iletişim(Ayrı sayfada birde anasayfada olsun
+alltada olsun)
+-anasayfada whatsapp ikonu olucak alyadaki gibi 
+
+Hakkımzıda
+--------------------------------------------
+atlöye üretimi olucak
+proje sayısı 
+--------------------------------
+hizmetlerde 
+
+tasarım , uygulama , proje yönetimi.
+
+----------------------------------------
+iletişim 
+
+projeler
+---------------------------------------
+https://www.1061mimarlik.com.tr/mimarlik-konut-projeleri-galeri
+-> bu sayfadaki resmin yanındaki ok işaretini beğendim
+
+2.görüşme
+--------------------------------
+iletişim kısmı anasayfadan kaldırılacak
+proje oluştur kısmını kaldır
+des logo kullanılacak
+
+
+Merhaba,
+
+Linux Performans paketinin 12 aylık %30 indirimli seçeneğinden faydalanmak istiyorum.
+
+Teşekkürler.
+
+// Modal Slider
+document.addEventListener('DOMContentLoaded', function () {
+    const projectItems = document.querySelectorAll('.project-item a');
+    const modal = document.getElementById('slider-overlay');
+    const modalImagesContainer = document.querySelector('.slider-images');
+    const closeModalButton = document.querySelector('.close');
+    const nextButton = modal.querySelector('.next');
+    const prevButton = modal.querySelector('.prev');
+    let currentModalSlideIndex = 0;
+
+    projectItems.forEach((item, index) => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            populateModalImages(index); // Modal içeriğini ayarla
+            modal.style.display = 'flex'; // Modalı göster
+        });
+    });
+
+    closeModalButton.addEventListener('click', function () {
+        modal.style.display = 'none'; // Modalı kapat
+    });
+
+    nextButton.addEventListener('click', function () {
+        changeModalSlide(1); // Sonraki resme geç
+    });
+
+    prevButton.addEventListener('click', function () {
+        changeModalSlide(-1); // Önceki resme geç
+    });
+
+    function populateModalImages(projectIndex) {
+        const images = [
+            ['damla hn/bar alanı revize3.jpg','damla hn/bar alanı revize4.jpg','damla hn/çocuk odası revize2.jpg','damla hn/çocuk odası3.jpg',
+                'damla hn/ebeveyn banyo revize2.jpg','','damla hn/bar alanı revize3.jpg','damla hn/bar alanı revize3.jpg',
+                'damla hn/bar alanı revize3.jpg','damla hn/ebeveyn banyo revize3.jpg','damla hn/bar alanı revize3.jpg','damla hn/bar alanı revize3.jpg',
+                'damla hn/bar alanı revize3.jpg','damla hn/bar alanı revize3.jpg','damla hn/bar alanı revize3.jpg','damla hn/bar alanı revize3.jpg',
+                'damla hn/bar alanı revize3.jpg','damla hn/bar alanı revize3.jpg','damla hn/bar alanı revize3.jpg','damla hn/bar alanı revize3.jpg',
+                'damla hn/bar alanı revize3.jpg','damla hn/bar alanı revize3.jpg',
+            ],
+            ['images/design.jpg', 'images/project3.jpg', 'images/project1.jpg'],
+            ['images/project3.jpg', 'images/project1.jpg', 'images/project2.jpg'],
+            ['images/project3.jpg', 'images/project1.jpg', 'images/project2.jpg'],
+            ['images/project3.jpg', 'images/project1.jpg', 'images/project2.jpg'],
+            ['images/project3.jpg', 'images/project1.jpg', 'images/project2.jpg'],
+            ['images/project3.jpg', 'images/project1.jpg', 'images/project2.jpg'],
+        ][projectIndex];
+
+        modalImagesContainer.innerHTML = ''; // Eski resimleri temizle
+        images.forEach(src => {
+            const imgElement = document.createElement('img');
+            imgElement.src = src;
+            modalImagesContainer.appendChild(imgElement);
+        });
+        currentModalSlideIndex = 0; // Slider indexini sıfırla
+        showModalSlide(currentModalSlideIndex); // İlk resmi göster
+    }
+
+    function showModalSlide(index) {
+        const slides = modalImagesContainer.getElementsByTagName('img');
+        Array.from(slides).forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none'; // Sadece aktif olanı göster
+        });
+    }
+
+    function changeModalSlide(step) {
+        const slides = modalImagesContainer.getElementsByTagName('img');
+        currentModalSlideIndex = (currentModalSlideIndex + step + slides.length) % slides.length;
+        showModalSlide(currentModalSlideIndex); // Resmi değiştir
+    }
+});
+
+
+ 

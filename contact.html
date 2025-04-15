@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DES İÇMİMARLIK - Hizmetler</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" type="image/png" href="images/logo.webp">
+</head>
+<body>
+    <header class="navbar navbar-expand-md navbar-light fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="images/logo.webp" alt="DES Mimarlık Logo" class="img-fluid">
+            </div>
+            <nav class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active" data-en="Home" data-tr="Anasayfa">ANASAYFA</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" data-en="About" data-tr="Hakkımızda">HAKKIMIZDA</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link" data-en="Services" data-tr="Hizmetler">HİZMETLER</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link" data-en="Projects" data-tr="Projeler">PROJELER</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link" data-en="Contact" data-tr="İletişim">İLETİŞİM</a></li>
+                    <li class="nav-item"><a href="#" id="turkish"><img src="images/turkey.webp" class="flag-icon" alt="Türkçe"></a></li>
+                    <li class="nav-item"><a href="#" id="english"><img src="images/united-kingdom.webp" class="flag-icon" alt="English"></a></li>
+                </ul>
+            </nav>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>İletişim Bilgileri</h2>
+                    <p>Hayallerinizdeki mekanları birlikte oluşturmak için sizi ofisimize bekliyoruz.</p>
+                    <div class="info-block d-flex mb-3">
+                        <img src="images/address-icon.webp" class="mr-3" alt="Adres">
+                        <div>
+                            <h3>Adres</h3>
+                            <p>Adnan Kahveci Mah, Kurtuluş Cd. No: 3/2, 34528 Beylikdüzü/İstanbul</p>
+                        </div>
+                    </div>
+                    <div class="info-block d-flex mb-3">
+                        <img src="images/phone-icon.webp" class="mr-3" alt="Telefon">
+                        <div>
+                            <h3>Telefon</h3>
+                            <p>+90 0531 844 34 74</p>
+                        </div>
+                    </div>
+                    <div class="info-block d-flex mb-3">
+                        <img src="images/email-icon.webp" class="mr-3" alt="E-Mail">
+                        <div>
+                            <h3>E-Mail</h3>
+                            <p>info@desicmimarlik.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>İletişim Formu</h2>
+                    <form action="send_email.php" method="post">
+                        <input type="text" name="firstName" placeholder="Adınız" class="form-control mb-3" required>
+                        <input type="text" name="lastName" placeholder="Soyadınız" class="form-control mb-3" required>
+                        <input type="email" name="email" placeholder="E-Mail" class="form-control mb-3" required>
+                        <input type="text" name="phone" placeholder="Telefon" class="form-control mb-3" required>
+                        <textarea name="message" placeholder="Mesajınız" class="form-control mb-3" rows="4" required></textarea>
+                        <button type="submit" class="btn btn-dark btn-block">Gönder</button>
+                    </form>     
+                </div>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.6086334479146!2d28.624555075557303!3d40.99004992054779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55f3d93419299%3A0x66269f1f3f7e712d!2zRGVzIMSww6cgTWltYXJsxLFr!5e0!3m2!1str!2str!4v1724240638178!5m2!1str!2str" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.webp" alt="DES Mimarlık Logo">
+                <p>Des Interiors Design</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <ul>
+
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="about.html">Hizmetler</a></li>
+                        <li><a href="projects.html">Projelerimiz</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hizmetlerimiz</h3>
+                    <ul>
+                        <li><a href="#">Tasarım</a></li>
+                        <li><a href="#">Danışmanlık</a></li>
+                        <li><a href="#">Uygulama</a></li>
+                        <li><a href="#">Peyzaj</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-description">
+                Des İç Mimarlık, ev ve villa tasarımlarından fuar stantlarına, mağazalardan klinik ve showroomlara
+                kadar geniş bir yelpazede özelleştirilmiş ve anahtar teslim projeler sunar. <br><p>Estetik ve fonksiyonelliği
+                bir araya getirerek, her mekanınızı sizin için en iyi şekilde tasarlarız.</p><br>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/interiors.des/"><img src="images/facebook.webp"
+                        class="social-icon" alt="Facebook"></a>
+                <a href="https://www.instagram.com/interiors.des/"><img src="images/instagram.webp"
+                        class="social-icon" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/company/des-i%CC%87%C3%A7-mimarl%C4%B1k/"><img
+                        src="images/linkedin.webp" class="social-icon" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="whatsapp-icon">
+            <a id="whatsapp-link" href="#" target="_blank">
+                <img src="images/whatsapp.webp" alt="WhatsApp">
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 DES Mimarlık. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="services.js"></script>
+</body>
+</html>
+

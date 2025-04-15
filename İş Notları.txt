@@ -1,0 +1,33 @@
+Şirketlerde daha çok işe yarayan diller, çalışmak istediğin alanlara ve şirketlerin odaklandığı teknolojilere bağlıdır. Ancak genel olarak geniş bir yelpazede kullanılabilecek ve talep gören bazı diller şunlardır:
+
+1. Python
+Kullanım Alanları: Veri bilimi, makine öğrenimi, yapay zeka, web geliştirme (Django, Flask), otomasyon, siber güvenlik.
+Neden: Python, basit sözdizimi ve geniş kullanım alanlarıyla hemen hemen her sektörde talep gören bir dildir. Veri analizi ve makine öğrenimi gibi alanlarda liderdir ve aynı zamanda backend geliştirme için de popülerdir.
+2. JavaScript (ve TypeScript)
+Kullanım Alanları: Frontend geliştirme (React, Angular, Vue.js), backend geliştirme (Node.js), mobil uygulama geliştirme (React Native), tam yığın (full-stack) geliştirme.
+Neden: JavaScript, web geliştirme için vazgeçilmezdir ve neredeyse her şirket bir şekilde JavaScript kullanmaktadır. TypeScript ise JavaScript'e statik tip kontrolü ekler ve büyük projelerde hataları azaltır, bu yüzden hızla popülerleşmektedir.
+3. Java
+Kullanım Alanları: Kurumsal uygulamalar, Android uygulama geliştirme, büyük veri çözümleri (Hadoop), mikroservis mimarisi.
+Neden: Java, uzun yıllardır güvenilirliği ve performansıyla bilinir. Büyük kurumsal uygulamalar, bankacılık sistemleri, Android uygulamaları gibi alanlarda yaygın olarak kullanılır. Spring framework ile birlikte, mikroservis mimarilerinde de tercih edilir.
+4. C#
+Kullanım Alanları: Windows uygulamaları, oyun geliştirme (Unity), web geliştirme (ASP.NET), bulut çözümleri (Azure).
+Neden: C#, Microsoft ekosisteminde geniş bir kullanım alanına sahiptir. Özellikle Windows tabanlı uygulamalar ve ASP.NET ile web geliştirme için tercih edilir. Ayrıca Unity oyun motoru ile oyun geliştirme konusunda da önemli bir dildir.
+5. SQL
+Kullanım Alanları: Veritabanı yönetimi, veri analizi, backend geliştirme.
+Neden: Herhangi bir veri tabanı yönetimi rolünde veya backend geliştirmede, SQL bilmek gereklidir. Veritabanı sorgulama ve yönetimi için evrensel olarak kullanılır.
+6. Go (Golang)
+Kullanım Alanları: Mikroservis mimarisi, bulut çözümleri, yüksek performanslı ağ ve sistem programlama.
+Neden: Go, özellikle performans gerektiren bulut tabanlı uygulamalarda ve mikroservis mimarilerinde hızla popüler hale geldi. Şirketler, ölçeklenebilir ve yüksek performanslı sistemler geliştirmek için Go'yu tercih ediyor.
+7. Swift
+Kullanım Alanları: iOS ve macOS uygulama geliştirme.
+Neden: Apple'ın geliştirdiği Swift, iOS uygulama geliştirme için en önemli dildir. Mobil uygulama geliştirme alanında kariyer yapmak istiyorsan Swift öğrenmek büyük bir avantaj sağlar.
+8. Kotlin
+Kullanım Alanları: Android uygulama geliştirme, backend geliştirme (Ktor).
+Neden: Google'ın resmi Android geliştirme dili olarak Java'nın yerini almaya başladı. Modern ve güvenli bir dil olduğu için Android geliştirmede Java'nın yerine geçmeye devam ediyor.
+9. Rust
+Kullanım Alanları: Sistem programlama, güvenlik, yüksek performanslı uygulamalar, blockchain geliştirme.
+Neden: Rust, özellikle güvenli ve yüksek performanslı sistemler için C ve C++'a modern bir alternatif olarak tercih ediliyor. Şirketler, bellek güvenliği sorunlarını minimize etmek için Rust kullanmaya başladı.
+10. Ruby
+Kullanım Alanları: Web geliştirme (Ruby on Rails), prototip geliştirme.
+Neden: Ruby on Rails, hızlı prototipleme ve web geliştirme için tercih edilen bir framework’tür. Hızlı geliştirme süreçleri için küçük ve orta ölçekli şirketler tarafından yaygın olarak kullanılır.
+Bu dillerden birkaçını öğrenmek, seni farklı sektörlerde çalışmaya uygun hale getirir ve iş bulma şansını artırır. Ayrıca, dil seçimini çalışmak istediğin alanlara göre şekillendirmen önemlidir. Örneğin, web geliştirme için JavaScript, backend geliştirme için Java veya Python, mobil uygulama geliştirme için Swift veya Kotlin öğrenmek iyi bir strateji olabilir.
